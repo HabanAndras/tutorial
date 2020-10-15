@@ -1,9 +1,9 @@
 /**
- * \class Szörny
+ * \class SzÃ¶rny
  * 
- * \brief Szörny class
+ * \brief SzÃ¶rny class
  * 
- * \author Habán András, Tranta Máté, Tóth Nroerbert
+ * \author HabÃ¡n AndrÃ¡s, Tranta MÃ¡tÃ©, TÃ³th Nroerbert
  * 
  * Created on: 2020/10/14 17:15
 */
@@ -11,21 +11,22 @@
 #include<string>
 #include<fstream>
 #include<vector>
+#include<cmath>
 
 class Szorny
 {
 public:
 	Szorny(std::string nev, int hp, int dmg,double speed) :nev(nev), hp(hp), dmg(dmg),speed(speed) {}  
-	int getDmg()const;	///< Lekéri a hõs DMG-ét
-	int getHp()const;	///< Lekéri a hõs HP-ját
-	static void harc(Szorny &,Szorny &); ///< Az argumentumban megadott két hõst harcoltatja
-	double getSpeed()const;	///< Lekéri a hõs atackspeedjét
-	std::string getName()const;		///< Lekéri a hõs nevét
-	static Szorny parseUnit(const std::string);	///< Beolvassa a hõs értékeit
+	int getDmg()const;	///< LekÃ©ri a hÃµs DMG-Ã©t
+	int getHp()const;	///< LekÃ©ri a hÃµs HP-jÃ¡t
+	static void harc(Szorny &,Szorny &); ///< Az argumentumban megadott kÃ©t hÃµst harcoltatja
+	double getSpeed()const;	///< LekÃ©ri a hÃµs atackspeedjÃ©t
+	std::string getName()const;		///< LekÃ©ri a hÃµs nevÃ©t
+	static Szorny parseUnit(const std::string);	///< Beolvassa a hÃµs Ã©rtÃ©keit
 private:
-	std::string nev; ///< A hõs neve
-	int hp; 	///< A hõs életpontjai
-	int dmg;	///< A hõs ütésének erõsege
-	double speed;	///< A hõs ütéseinek gyorsasága
+	std::string nev; ///< A hÃµs neve
+	int hp; 	///< A hÃµs Ã©letpontjai
+	int dmg;	///< A hÃµs Ã¼tÃ©sÃ©nek erÃµsege
+	double speed;	///< A hÃµs Ã¼tÃ©seinek gyorsasÃ¡ga
 	void tamad(Szorny &)const; 
 };
